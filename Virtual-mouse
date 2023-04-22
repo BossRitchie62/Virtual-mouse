@@ -1,0 +1,24 @@
+import pyautogui
+import time
+
+def move_mouse(x, y):
+    pyautogui.moveTo(x, y)
+
+def click_mouse(x, y):
+    pyautogui.click(x, y)
+
+def scroll_mouse(units):
+    pyautogui.scroll(units)
+
+def drag_mouse(x1, y1, x2, y2, duration):
+    pyautogui.moveTo(x1, y1)
+    pyautogui.dragTo(x2, y2, duration=duration)
+
+# example usage
+move_mouse(100, 100)
+time.sleep(1)
+click_mouse(100, 100)
+time.sleep(1)
+scroll_mouse(10)
+time.sleep(1)
+drag_mouse(100, 100, 200, 200, 1)
